@@ -1,0 +1,18 @@
+#end-of-page{
+    height:200px;
+    width: 100%vw;
+    background-color: #36354E;
+    opacity: 0.9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+#end-of-page div{
+    height: 20px;
+    width: auto;
+    color: cornsilk;
+
+}

@@ -1,0 +1,34 @@
+#header-container{
+    height: 10%vh;
+    width: 100%vw;
+    display: flex;
+    background-color: #36354E;
+    justify-content: space-around;
+    opacity: 0.8;
+    color: ghostwhite;
+    /* position: fixed; */
+    box-shadow: 0px 3px 10px 1px #36354E;
+}
+
+.header-flex-item a h3{
+    height: 10%vh;
+    width: 20%vw;
+    color: whitesmoke;
+    transition: 0.3s ease-in-out;
+    
+
+}
+
+.header-flex-item a h3:hover{
+    /* transform: scale(1.5); */
+    color:ghostwhite;
+    transform:scale(1.5);
+    
+
+}
+
+a{
+    text-decoration: none;
+
+}
+

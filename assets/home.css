@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    
+}
+
+
+#container {
+    margin-top: 15px;
+    min-height: 500px;
+    max-height: 100%vh;
+    width: 100%vw;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.flex-item {
+    height : 15%vh;
+    width : 80%vw;
+    margin: 10px 70px 10px 70px ;
+    background-color: burlywood;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 3px 10px 1px rgb(221, 188, 146);
+}
+
+.flex-item:hover{
+    transform: scale(1.1);
+
+}
+
+#Content{
+    height: 60px;
+    width:400px;
+    margin: 10px 15px 10px ;
+    padding-left: 2px;
+    font-weight: 4px;
+
+}
+
+#DeadLine{
+    height: 22px;
+    width: 200px;
+    padding: 2px 5px 0px 0px ;
+    overflow: hidden;
+    margin: 30px 15px 10px ;
+    padding-left: 2px;
+    font-size: 20px;
+}
+
+#Done{
+    height:12%vh;
+    width:40px;
+    margin: 1%;
+    margin: 10px 15px 10px ;
+    padding-left: 2px;
+}
+
+.add-todo{
+    margin: 20px 100px;
+    background:  #36354E;
+    opacity: 0.7;
+    /* box-shadow:0px 4px 12px rgba(136,18,56,0.15) ; */
+    
+    border-radius: 80px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transition: 0.1s ease-in-out;
+}
+.add-todo h1{
+    color: ghostwhite;
+    margin-left: 11px;
+    padding-top: 1px;
+
+}
+
+.add-todo:hover{
+    background: rgb(100, 74, 173);
+    box-shadow:0px 4px 12px rgba(136,18,56,0.15);
+/*     
+    width: 50px;
+    height: 50px;
+    
+    border-radius: 100px; */
+    transform: scale(1.5) rotate(90deg);
+
+}
+

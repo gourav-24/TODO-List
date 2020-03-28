@@ -34,13 +34,13 @@
         </div>
 
         <div class="add-todo">
-            <a href="/form"><h1>+</h1></a>
+            <a style="text-decoration: none;" href="/form"><h1>+</h1></a>
             
 
 
         </div>
         <div id="form">
-            <a style="margin: 10px 10px 10px;" href="/">X</a>
+            <a style="margin: 10px 10px 10px; text-decoration: none;" href="/">X</a>
         <form action="/create" method="POST">
             <label name="content" class="label">Task :</label>
             <input class="input" type="text" name="content" placeholder="Work to do" required>
@@ -56,6 +56,9 @@
             
         </form>
         </div>
+
+        <%- include('_footer') -%>
+
 
     </body>
 </html>
