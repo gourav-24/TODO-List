@@ -1,0 +1,39 @@
+<html>
+    <title>
+        <%= title %>
+    </title>
+    <head>
+        <link rel="stylesheet" href="./other.css">
+        
+ 
+    </head>
+    <body>
+        <%- include('_header'); -%>
+
+        <div id="container">
+            
+                <% for(task of tasks){  %>
+                
+                    <div class= "flex-item">
+                        <div id="Content">
+                            <h3><%= task.content %></h3>
+                        </div>
+                        <div id="DeadLine">
+                            By: <%= task.deadLine %>
+                    
+                        </div>
+                        <div id="Done">
+                            
+                            <span style='font-size:50px;'>&#8594;</span>
+                        
+                        </div>
+
+                    </div>
+                    
+                <% } %>
+            
+        </div>
+
+        
+    </body>
+</html>

@@ -6,9 +6,12 @@ const otherController = require('../controllers/otherTag_controller');
 console.log('index.js of routes loaded');
 
 
-router.use('/personal',otherController.personal);
-router.use('/professional',otherController.professional);
-router.use('/shopping',otherController.shopping);
+router.get('/personal',otherController.personal);
+router.get('/professional',otherController.professional);
+router.get('/shopping',otherController.shopping);
+router.post('/create',homeController.create);
+router.get('/destroy/:id',homeController.destroy);
+router.get('/form',homeController.form);
 
 
 router.get('/',homeController.home);

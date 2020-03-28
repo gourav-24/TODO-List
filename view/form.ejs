@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>
+            <%= title  %>
+        </title>
+        <link rel="stylesheet" href="./form.css">
+
+    </head>
+    <body>
+        <%- include('_header'); -%>
+
+        <div id="container">
+            
+                <% for(task of tasks){  %>
+                
+                    <div class= "flex-item">
+                        <div id="Content">
+                            <h3><%= task.content %></h3>
+                        </div>
+                        <div id="DeadLine">
+                            By: <%= task.deadLine %>
+                    
+                        </div>
+                        <div id="Done">
+                            
+                            <span style='font-size:50px;'>&#8594;</span>
+                        
+                        </div>
+
+                    </div>
+                    
+                <% } %>
+            
+        </div>
+
+        <div class="add-todo">
+            <a href="/form"><h1>+</h1></a>
+            
+
+
+        </div>
+        <div id="form">
+            <a style="margin: 10px 10px 10px;" href="/">X</a>
+        <form action="/create" method="POST">
+            <label name="content" class="label">Task :</label>
+            <input class="input" type="text" name="content" placeholder="Work to do" required>
+            <label name="deadLine" class="label">Due date :</label>
+            <input class="input" type="date" name="deadLine" placeholder="dd-mm-yyyy" required>
+            <label name="tag" class="label">Tag :</label>
+            <select class="input" name="tag" required>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Professional">Professional</option>
+            </select>
+            <button type="submit">submit</button>
+            
+        </form>
+        </div>
+
+    </body>
+</html>

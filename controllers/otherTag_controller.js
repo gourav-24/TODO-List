@@ -1,7 +1,12 @@
-module.exports.professional = function(req,res){
+const Task =require('../model/task');
+module.exports.professional = async function(req,res){
     try{
+        let Professional_tasks = await Task.find({tag : "Professional"});
         console.log('/professional loaded');
-        res.send('<h1> Professional list loaded </h1>');
+        return res.render('other',{
+            title:"Professional",
+            tasks : Professional_tasks
+        });
     }catch(err){
         console.log('error in loading professional tag page')
     }
@@ -9,24 +14,33 @@ module.exports.professional = function(req,res){
 }
 
 
-module.exports.personal =function(req,res){
+module.exports.personal = async function(req,res){
     try{
+        let Personal_tasks = await Task.find({tag : "Personal"});
+        
         console.log('/personal loaded');
-        res.send('<h1> personal list loaded </h1>');
+        return res.render('other',{
+            title:"Personal",
+            tasks: Personal_tasks
+        });
 
     }catch(err){
-        console.log('error in loading personal tag page');
+        console.log('error in loading personal tag page',err);
 
     }
 }
 
-module.exports.shopping = function(req,res){
+module.exports.shopping = async function(req,res){
     try{
+        let Shopping_tasks = await Task.find({tag : "Shopping"});
+        
         console.log('/shopping loaded');
-        res.send('<h1> shopping list loaded </h1>');
-
+        return res.render('other',{
+            title:"Shopping",
+            tasks:Shopping_tasks
+        });
     }catch(err){
-        console.log('error in loading shopping tag page');
+        console.log('error in loading shopping tag page',err);
 
     
     }
